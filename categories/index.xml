@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories | Kyle Domico</title>
+    <link>https://kyledomico.com/categories/</link>
+      <atom:link href="https://kyledomico.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://kyledomico.com/media/logo_hud6bd8d288831c93caa25b0b498d16e63_159332_300x300_fit_lanczos_3.png</url>
+      <title>Categories</title>
+      <link>https://kyledomico.com/categories/</link>
+    </image>
+    
+  </channel>
+</rss>

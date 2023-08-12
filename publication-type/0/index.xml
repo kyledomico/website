@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>0 | Kyle Domico</title>
+    <link>https://kyledomico.com/publication-type/0/</link>
+      <atom:link href="https://kyledomico.com/publication-type/0/index.xml" rel="self" type="application/rss+xml" />
+    <description>0</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 22 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kyledomico.com/media/logo_hud6bd8d288831c93caa25b0b498d16e63_159332_300x300_fit_lanczos_3.png</url>
+      <title>0</title>
+      <link>https://kyledomico.com/publication-type/0/</link>
+    </image>
+    
+    <item>
+      <title>A Machine Learning and Computer Vision Approach to Geomagnetic Storm Forecasting</title>
+      <link>https://kyledomico.com/publication/agu22/</link>
+      <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://kyledomico.com/publication/agu22/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

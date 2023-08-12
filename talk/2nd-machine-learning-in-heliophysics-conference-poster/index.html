@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: August 11, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.c29216cdb8bfa8384c39a810c2330b0d.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZHDJLTGQB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-4ZHDJLTGQB', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Kyle Domico" />
+
+
+
+
+
+  
+
+<meta name="description" content="Geomagnetic storms, disturbances of Earth&#39;s magnetosphere caused by masses of charged particles being emitted from the Sun, are an uncontrollable threat to modern technology. Notably, they have the potential to damage satellites and cause instability in power grids on Earth, among other disasters. They result from high sun activity, which are induced from cool areas on the Sun known as sunspots. Forecasting the storms to prevent disasters requires an understanding of how and when they will occur. However, current prediction methods at the National Oceanic and Atmospheric Administration (NOAA) are limited in that they depend on expensive solar wind spacecraft and a global-scale magnetometer sensor network. In this paper, we introduce a novel machine learning and computer vision approach to accurately forecast geomagnetic storms without the need of such costly physical measurements. Our approach extracts features from images of the Sun to establish correlations between sunspots and geomagnetic storm classification and is competitive with NOAA&#39;s predictions. Indeed, our prediction achieves a 76% storm classification accuracy. This paper serves as an existence proof that machine learning and computer vision techniques provide an effective means for augmenting and improving existing geomagnetic storm forecasting methods." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://kyledomico.com/talk/2nd-machine-learning-in-heliophysics-conference-poster/" />
+<link rel="canonical" href="https://kyledomico.com/talk/2nd-machine-learning-in-heliophysics-conference-poster/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu67ac9e983fe02919f6a42da8b19713ed_12886143_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu67ac9e983fe02919f6a42da8b19713ed_12886143_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#c5050c" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+
+  <meta property="twitter:site" content="@kyle_domico" />
+  <meta property="twitter:creator" content="@kyle_domico" />
+<meta property="twitter:image" content="https://kyledomico.com/talk/2nd-machine-learning-in-heliophysics-conference-poster/featured.jpg" />
+<meta property="og:site_name" content="Kyle Domico" />
+<meta property="og:url" content="https://kyledomico.com/talk/2nd-machine-learning-in-heliophysics-conference-poster/" />
+<meta property="og:title" content="2nd Machine Learning in Heliophysics Conference (Poster) | Kyle Domico" />
+<meta property="og:description" content="Geomagnetic storms, disturbances of Earth&#39;s magnetosphere caused by masses of charged particles being emitted from the Sun, are an uncontrollable threat to modern technology. Notably, they have the potential to damage satellites and cause instability in power grids on Earth, among other disasters. They result from high sun activity, which are induced from cool areas on the Sun known as sunspots. Forecasting the storms to prevent disasters requires an understanding of how and when they will occur. However, current prediction methods at the National Oceanic and Atmospheric Administration (NOAA) are limited in that they depend on expensive solar wind spacecraft and a global-scale magnetometer sensor network. In this paper, we introduce a novel machine learning and computer vision approach to accurately forecast geomagnetic storms without the need of such costly physical measurements. Our approach extracts features from images of the Sun to establish correlations between sunspots and geomagnetic storm classification and is competitive with NOAA&#39;s predictions. Indeed, our prediction achieves a 76% storm classification accuracy. This paper serves as an existence proof that machine learning and computer vision techniques provide an effective means for augmenting and improving existing geomagnetic storm forecasting methods." /><meta property="og:image" content="https://kyledomico.com/talk/2nd-machine-learning-in-heliophysics-conference-poster/featured.jpg" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2022-03-22T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2022-03-22T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kyledomico.com/talk/2nd-machine-learning-in-heliophysics-conference-poster/"
+  },
+  "name": "2nd Machine Learning in Heliophysics Conference (Poster)",
+  
+  "location": {
+    "@type": "Place",
+    "name": "Boulder, CO"
+  },
+  
+  
+  "image": [
+    "https://kyledomico.com/talk/2nd-machine-learning-in-heliophysics-conference-poster/featured.jpg"
+  ],
+  
+  "startDate": "2022-03-22T00:00:00Z",
+  
+  
+  "performer": {
+    "@type": "Person",
+    "name": "Kyle Domico"
+  },
+  
+  "description": "Geomagnetic storms, disturbances of Earth's magnetosphere caused by masses of charged particles being emitted from the Sun, are an uncontrollable threat to modern technology. Notably, they have the potential to damage satellites and cause instability in power grids on Earth, among other disasters. They result from high sun activity, which are induced from cool areas on the Sun known as sunspots. Forecasting the storms to prevent disasters requires an understanding of how and when they will occur. However, current prediction methods at the National Oceanic and Atmospheric Administration (NOAA) are limited in that they depend on expensive solar wind spacecraft and a global-scale magnetometer sensor network. In this paper, we introduce a novel machine learning and computer vision approach to accurately forecast geomagnetic storms without the need of such costly physical measurements. Our approach extracts features from images of the Sun to establish correlations between sunspots and geomagnetic storm classification and is competitive with NOAA's predictions. Indeed, our prediction achieves a 76% storm classification accuracy. This paper serves as an existence proof that machine learning and computer vision techniques provide an effective means for augmenting and improving existing geomagnetic storm forecasting methods."
+}
+</script>
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>2nd Machine Learning in Heliophysics Conference (Poster) | Kyle Domico</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="a8edef490afe42206247b6ac05657af0" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/"><img src="/media/logo_hud6bd8d288831c93caa25b0b498d16e63_159332_0x70_resize_lanczos_3.png" alt="Kyle Domico"
+            
+            ></a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/"><img src="/media/logo_hud6bd8d288831c93caa25b0b498d16e63_159332_0x70_resize_lanczos_3.png" alt="Kyle Domico"
+          
+          ></a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#highlights"><span>Accomplishments</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>2nd Machine Learning in Heliophysics Conference (Poster)</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">
+      Kyle Domico</span>
+  </div>
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://youtu.be/glzoUk8PhEI" target="_blank" rel="noopener">
+  Video
+</a>
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://ml-helio.github.io" target="_blank" rel="noopener">
+    Conference</a>
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 400px; max-height: 400px;">
+  <div style="position: relative">
+    <img src="/talk/2nd-machine-learning-in-heliophysics-conference-poster/featured_hu3dbd324f693bddd8463231ea3dd0e90e_22130_720x2500_fit_q75_h2_lanczos.webp" width="400" height="400" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    
+      <h3>Abstract</h3>
+      <p class="pub-abstract">Geomagnetic storms, disturbances of Earth&rsquo;s magnetosphere caused by masses of charged particles being emitted from the Sun, are an uncontrollable threat to modern technology. Notably, they have the potential to damage satellites and cause instability in power grids on Earth, among other disasters. They result from high sun activity, which are induced from cool areas on the Sun known as sunspots. Forecasting the storms to prevent disasters requires an understanding of how and when they will occur. However, current prediction methods at the National Oceanic and Atmospheric Administration (NOAA) are limited in that they depend on expensive solar wind spacecraft and a global-scale magnetometer sensor network. In this paper, we introduce a novel machine learning and computer vision approach to accurately forecast geomagnetic storms without the need of such costly physical measurements. Our approach extracts features from images of the Sun to establish correlations between sunspots and geomagnetic storm classification and is competitive with NOAA&rsquo;s predictions. Indeed, our prediction achieves a 76% storm classification accuracy. This paper serves as an existence proof that machine learning and computer vision techniques provide an effective means for augmenting and improving existing geomagnetic storm forecasting methods.</p>
+    
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            Mar 22, 2022
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Event</div>
+          <div class="col-12 col-md-9">
+            <a href="https://ml-helio.github.io" target="_blank" rel="noopener">
+            ML-HELIO 2022
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Location</div>
+          <div class="col-12 col-md-9">Boulder, CO</div>
+          
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      <p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /talk/2nd-machine-learning-in-heliophysics-conference-poster/poster_hu21d343efd6268a84def490775d210d4d_6881987_554c2c810700e19e8be48535b64e5c9e.webp 400w,
+               /talk/2nd-machine-learning-in-heliophysics-conference-poster/poster_hu21d343efd6268a84def490775d210d4d_6881987_8efb871433b960ddd325a9ff2d424b97.webp 760w,
+               /talk/2nd-machine-learning-in-heliophysics-conference-poster/poster_hu21d343efd6268a84def490775d210d4d_6881987_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/talk/2nd-machine-learning-in-heliophysics-conference-poster/poster_hu21d343efd6268a84def490775d210d4d_6881987_554c2c810700e19e8be48535b64e5c9e.webp"
+               width="570"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/machine-learning/">Machine Learning</a>
+  
+  <a class="badge badge-light" href="/tag/heliophysics/">Heliophysics</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fkyledomico.com%2Ftalk%2F2nd-machine-learning-in-heliophysics-conference-poster%2F&amp;text=2nd&#43;Machine&#43;Learning&#43;in&#43;Heliophysics&#43;Conference&#43;%28Poster%29" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fkyledomico.com%2Ftalk%2F2nd-machine-learning-in-heliophysics-conference-poster%2F&amp;t=2nd&#43;Machine&#43;Learning&#43;in&#43;Heliophysics&#43;Conference&#43;%28Poster%29" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=2nd%20Machine%20Learning%20in%20Heliophysics%20Conference%20%28Poster%29&amp;body=https%3A%2F%2Fkyledomico.com%2Ftalk%2F2nd-machine-learning-in-heliophysics-conference-poster%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fkyledomico.com%2Ftalk%2F2nd-machine-learning-in-heliophysics-conference-poster%2F&amp;title=2nd&#43;Machine&#43;Learning&#43;in&#43;Heliophysics&#43;Conference&#43;%28Poster%29" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=2nd&#43;Machine&#43;Learning&#43;in&#43;Heliophysics&#43;Conference&#43;%28Poster%29%20https%3A%2F%2Fkyledomico.com%2Ftalk%2F2nd-machine-learning-in-heliophysics-conference-poster%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fkyledomico.com%2Ftalk%2F2nd-machine-learning-in-heliophysics-conference-poster%2F&amp;title=2nd&#43;Machine&#43;Learning&#43;in&#43;Heliophysics&#43;Conference&#43;%28Poster%29" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://kyledomico.com/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu67ac9e983fe02919f6a42da8b19713ed_12886143_270x270_fill_lanczos_center_3.png" alt="Kyle Domico"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://kyledomico.com/">Kyle Domico</a></h5>
+      <h6 class="card-subtitle">PhD Student and Research Assistant</h6>
+      <p class="card-text">My research lies at the intersection of reinforcement learning and computer security.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/kyle_domico" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?hl=en&amp;user=X4UHBHkAAAAJ&amp;view_op=list_works&amp;authuser=2&amp;gmla=AJsN-F7EJGjP2X7tb8XH35VWnQzBISOVpbL1Kf5CPsqF0QhdEVWDPop0DEECZq09_Ow-LdZpgz6NNwc4Qyvr5H3J8cUbUnzwT66QildaUAFEk0vn0_-I32g" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/kyledomico" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/kyle-domico-4562771b6/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.f64289d8217e08e3afcd597d60836062.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.fa71bfdd82ca5b7ea4a46c3c3d1b03fa.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
