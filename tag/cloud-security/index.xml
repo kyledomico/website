@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud Security | Kyle Domico</title>
+    <link>https://kyledomico.com/tag/cloud-security/</link>
+      <atom:link href="https://kyledomico.com/tag/cloud-security/index.xml" rel="self" type="application/rss+xml" />
+    <description>Cloud Security</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kyledomico.com/media/logo_hud6bd8d288831c93caa25b0b498d16e63_159332_300x300_fit_lanczos_3.png</url>
+      <title>Cloud Security</title>
+      <link>https://kyledomico.com/tag/cloud-security/</link>
+    </image>
+    
+    <item>
+      <title>EIPSIM: Modeling Secure IP Address Allocation at Cloud Scale</title>
+      <link>https://kyledomico.com/publication/eipsim/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://kyledomico.com/publication/eipsim/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
